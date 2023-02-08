@@ -5,10 +5,6 @@ This repository is for ICLR2023 paper:
 
 
 #### Code Instructions: 
-#### Environment 
-Python3.6  
-
-We used pipreqs to generate the requirements.txt, thus we have the minimal packages needed.  
 
 #### Code structure 
 Will release the code very soon
