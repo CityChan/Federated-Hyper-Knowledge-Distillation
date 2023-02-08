@@ -1,9 +1,7 @@
 # FedHKD
 This repository is for ICLR2023 paper: 
 
-The Best of Both Worlds: Accurate Global and Personalized Models through Federated Learning with Data-Free Hyper-Knowledge Distillation
-
-[See our arxiv vision here:](https://arxiv.org/abs/2301.08968)
+[The Best of Both Worlds: Accurate Global and Personalized Models through Federated Learning with Data-Free Hyper-Knowledge Distillation](https://arxiv.org/abs/2301.08968)
 
 
 #### Code Instructions: 
