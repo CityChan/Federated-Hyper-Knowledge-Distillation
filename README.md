@@ -1,5 +1,7 @@
-# FedDFKD
-This repository is for summer intern's project: Communication-Efficient Federated Learning with heterogenous clients with Data-Free Knowledge Distillation
+# FedHKD
+This repository is for ICLR2023 paper: The Best of Both Worlds: Accurate Global and Personalized Models through Federated Learning with Data-Free Hyper-Knowledge Distillation
+[find our arxiv vision here:](https://arxiv.org/abs/2301.08968)
+
 
 #### Code Instructions: 
 #### Environment 
