@@ -59,7 +59,9 @@ def args_parser():
     
     parser.add_argument('--model', default= 'resnet18',
                         help='CNN resnet18 shufflenet')
-    
+
+    parser.add_argument('--upload_model', type=bool, default=True,
+                        help='whether to upload model parameters')
     parser.add_argument('--save_model', action="store_true", default= False,
                         help='saved model parameters')
     
