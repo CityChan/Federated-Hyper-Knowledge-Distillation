@@ -6,7 +6,10 @@ This is an official repository for our ICLR2023 paper
 #### Environment 
 Python3.6  
 
-We used pipreqs to generate the requirements.txt, thus we have the minimal packages needed.  
+We used pipreqs to generate the `requirements.txt`, thus we have the minimal packages needed.  
+```
+pip install -r requirements.txt
+```
 
 #### Code structure 
 * `main.py`: For training the model 
