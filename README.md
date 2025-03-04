@@ -24,14 +24,14 @@ pip install -r requirements.txt
 ```
 
 ### Code structure 
-* `main.py`: For training the model 
-* `models.py`: Our VAEs model for FMNIST, CIFAR10/100
-* `sampling.py`: Functions that generate non-iid datasets for federated learning
-* `utils.py`: Define functions that compute accuracy, soft prediction and model averaging
-* `mem_utils.py`: Library for monitoring memory usage and training time
-* `option.py`: Define hyper-parameters
-* `Server/*.py`: Object definition for server in each method
-* `Client/*.py`: Object definition for client in each method
+* `main.py`: general set up for training and evaluate FL schemes
+* `models.py`: model architectures for running experiments
+* `sampling.py`: functions for generating non-iid datasets for federated learning
+* `utils.py`:  functions for computing accuracy, knowledge distillation and model aggregation
+* `mem_utils.py`: library for monitoring memory usage and training time
+* `option.py`: define hyper-parameters
+* `Server/*.py`: object definition for server in differents scheme
+* `Client/*.py`: object definition for client in differents schemes
 
 ### Parameters
 * --dataset: 'CIFAR10', 'CIFAR100', ' SVHN'
