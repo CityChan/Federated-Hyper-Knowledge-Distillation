@@ -63,10 +63,10 @@ CUDA_VISIBLE_DEVICES=0 python main.py --dataset 'SVHN' --batch_size 64  --num_ep
 ```
 
 ### Acknowledgement
-This work is funded by Toyota Motor Corporation. We thank all staffs in AI/ML Infrastructure & Data Lab. We can not finish this work without their help.
+This work was completed during internship in Toyota AI/ML Infrastructure & Data Lab.
 
 ### Citeation
-Please cite our paper, if you happen to use this code:
+Please cite our paper, if you think this is useful:
 ```
 @inproceedings{chen2023best,
   title={The Best of Both Worlds: Accurate Global and Personalized Models through Federated Learning with Data-Free Hyper-Knowledge Distillation},  
