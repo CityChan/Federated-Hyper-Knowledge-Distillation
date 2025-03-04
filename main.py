@@ -1,4 +1,3 @@
-
 import torch
 import numpy as np
 import os,sys,os.path
@@ -8,18 +7,16 @@ from torch import nn
 import hashlib
 import argparse
 
-
 from models import CNNFemnist,ResNet18,ShuffLeNet
 from sampling import LocalDataset, LocalDataloaders, partition_data
 from option import args_parser
 
+# import different schemes  
 from Server.ServerFedAvg import ServerFedAvg
 from Server.ServerFedProx import ServerFedProx
 from Server.ServerFedMD import ServerFedMD 
 from Server.ServerFedProto import ServerFedProto
 from Server.ServerFedHKD import ServerFedHKD
-
-
 
 print(torch.__version__)
 torch.cuda.is_available()
@@ -29,6 +26,8 @@ print(device.type)
 
 args = args_parser()
 print(args)
+
+# obtain hash value for saving checkpoints
 args_hash = ''
 for k,v in vars(args).items():
     if k == 'eval_only':
@@ -40,12 +39,12 @@ args_hash = hashlib.sha256(args_hash.encode()).hexdigest()
 
 
 
-
+# Generate data partitions in FL
 train_dataset,testset, dict_users, dict_users_test = partition_data(n_users = args.num_clients, alpha=args.beta,rand_seed = args.seed, dataset=str(args.dataset))
 
 
 
-
+# Load local training datasets and testsets for each client
 Loaders_train = LocalDataloaders(train_dataset,dict_users,args.batch_size,ShuffleorNot = True,frac=args.part)
 Loaders_test = LocalDataloaders(testset,dict_users_test,args.batch_size,ShuffleorNot = True,frac=2*args.part)
 global_loader_test = torch.utils.data.DataLoader(testset, batch_size=args.batch_size,shuffle=True, num_workers=2)
@@ -57,6 +56,7 @@ for idx in range(args.num_clients):
         y = np.array(y)
         for i in range(batch):
             counts[int(y[i])] += 1
+    # print out data distribution of each client
     print('Client {} data distribution:'.format(idx))
     print(counts)
 
@@ -90,7 +90,6 @@ if args.model == 'shufflenet':
 print('# model parameters:', sum(param.numel() for param in global_model.parameters()))
 # global_model = nn.DataParallel(global_model)
 global_model.to(device)
-
 
 
 
