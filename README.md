@@ -6,7 +6,7 @@ This is an official repository for our ICLR2023 paper
   <img src="assets/FedHKD.png" width=90% align="center" alt="my alt text"/>
   </p>
   <figcaption width=80%><em>
-  Illustration of ChannelViT. The input for ChannelViT is a cell image from JUMP-CP, which comprises five fluorescence channels (colored differently) and three brightfield channels (colored in B&W). ChannelViT generates patch tokens for each individual channel, utilizing a learnable channel embedding </em><b>chn</b><em> to preserve channel-specific information. The positional embeddings </em><b>pos</b><em> and the linear projection </em><b>W</b><em> are shared across all channels.
+  A flow diagram showing computation, encryption and aggregation of hyper-knowledge.
   </em></figcaption>
 </figure>
 <br/>
