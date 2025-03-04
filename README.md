@@ -1,4 +1,4 @@
-# FedHKD
+# Federated Hyper Knowledge Distillation
 This is an official repository for our ICLR2023 paper
 * [The Best of Both Worlds Accurate Global and Personalized Models through Federated Learning with Data-Free Hyper-Knowledge Distillation](https://arxiv.org/abs/2301.08968)
 
