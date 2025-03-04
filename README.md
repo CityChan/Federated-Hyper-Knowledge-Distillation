@@ -13,7 +13,12 @@ This is an official repository for our ICLR2023 paper
 <br/>
 
 #### Environment 
-This project is developed based on python3.6 with [torch1.9 (rocm4.2)](https://pytorch.org/get-started/previous-versions/)
+This project is developed based on python 3.6 with [torch1.9 (rocm4.2)](https://pytorch.org/get-started/previous-versions/). We use [conda](https://www.anaconda.com/docs/main) to manage the virtual environment.
+```
+conda create -n fedhkd --python=3.6
+conda activate fedhkd
+pip install -r requirements.txt
+```
 
 We used pipreqs to generate the `requirements.txt`, thus we have the minimal packages needed.  
 ```
