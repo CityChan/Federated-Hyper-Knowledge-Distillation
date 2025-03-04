@@ -17,11 +17,7 @@ This project is developed based on python 3.6 with [torch1.9 (rocm4.2)](https://
 ```
 conda create -n fedhkd --python=3.6
 conda activate fedhkd
-pip install -r requirements.txt
-```
-
-We used pipreqs to generate the `requirements.txt`, thus we have the minimal packages needed.  
-```
+pip install torch==1.9.1+rocm4.2 torchvision==0.10.1+rocm4.2 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -r requirements.txt
 ```
 
