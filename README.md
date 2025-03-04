@@ -12,9 +12,8 @@ This is an official repository for our ICLR2023 paper
 <br/>
 <br/>
 
-#### Code Instructions: 
 #### Environment 
-Python3.6  
+This project is developed based on python3.6 with [torch1.9 (rocm4.2)](https://pytorch.org/get-started/previous-versions/)
 
 We used pipreqs to generate the `requirements.txt`, thus we have the minimal packages needed.  
 ```
