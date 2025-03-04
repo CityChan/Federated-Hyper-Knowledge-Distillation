@@ -15,13 +15,15 @@ This is an official repository for our ICLR2023 paper
 ### Environment 
 This project is developed based on python 3.6 with [torch1.9 (rocm4.2)](https://pytorch.org/get-started/previous-versions/). We use [conda](https://www.anaconda.com/docs/main) to manage the virtual environment.
 ```
+git clone git@github.com:CityChan/Federated-Hyper-Knowledge-Distillation.git
+cd Federated-Hyper-Knowledge-Distillation
 conda create -n fedhkd --python=3.6
 conda activate fedhkd
 pip install torch==1.9.1+rocm4.2 torchvision==0.10.1+rocm4.2 torchaudio==0.9.1 -f https://download.pytorch.org/whl/torch_stable.html
 pip install -r requirements.txt
 ```
 
-#### Code structure 
+### Code structure 
 * `main.py`: For training the model 
 * `models.py`: Our VAEs model for FMNIST, CIFAR10/100
 * `sampling.py`: Functions that generate non-iid datasets for federated learning
@@ -31,7 +33,7 @@ pip install -r requirements.txt
 * `Server/*.py`: Object definition for server in each method
 * `Client/*.py`: Object definition for client in each method
 
-#### Parameters
+### Parameters
 * --dataset: 'CIFAR10', 'CIFAR100', ' SVHN'
 * --batch_size: 64 by defalut 
 * --num_epochs: number of global rounds, 50 by defalut
@@ -55,14 +57,14 @@ pip install -r requirements.txt
 * --model: CNN resnet18 shufflenet
 * --save_model: save checkpoints of the model
 
-#### Running the code for training and evaluation
+### Running the code for training and evaluation
 We mainly use a .sh files to execute multiple expriements in parallel. 
 The exprimenets are saved in checkpoint with unique id. Also, when the dataset is downloaded for the first time it takes a while. 
 
-#### Acknowledgement
+### Acknowledgement
 This work is funded by Toyota Motor Corporation. We thank all staffs in AI/ML Infrastructure & Data Lab. We can not finish this work without their help.
 
-#### Citeation
+### Citeation
 Please cite our paper, if you happen to use this code:
 ```
 @inproceedings{chen2023best,
