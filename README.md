@@ -2,6 +2,17 @@
 This is an official repository for our ICLR2023 paper
 * [The Best of Both Worlds Accurate Global and Personalized Models through Federated Learning with Data-Free Hyper-Knowledge Distillation](https://arxiv.org/abs/2301.08968)
 
+<figure>
+  <p align="center">
+  <img src="assets/FedHKD.png" width=90% align="center" alt="my alt text"/>
+  </p>
+  <figcaption width=80%><em>
+  Illustration of ChannelViT. The input for ChannelViT is a cell image from JUMP-CP, which comprises five fluorescence channels (colored differently) and three brightfield channels (colored in B&W). ChannelViT generates patch tokens for each individual channel, utilizing a learnable channel embedding </em><b>chn</b><em> to preserve channel-specific information. The positional embeddings </em><b>pos</b><em> and the linear projection </em><b>W</b><em> are shared across all channels.
+  </em></figcaption>
+</figure>
+<br/>
+<br/>
+
 #### Code Instructions: 
 #### Environment 
 Python3.6  
