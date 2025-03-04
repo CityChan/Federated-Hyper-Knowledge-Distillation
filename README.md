@@ -42,7 +42,7 @@ pip install -r requirements.txt
 * --dropout_rate: drop out rate for each layer, 0.2 by default
 * --clip_grad: maximum norm for gradient, 1.0 by default
 * --num_users: number of clients, 10 by default
-* --sampling_rate: proportion of clients send updates per round, 1.0 by default
+* --sampling_rate: proportion of clients send updates per round, 1.1 by default
 * --local_ep: number of local epochs, 5 by default
 * --beta: concentration parameter for Dirichlet distribution: 0.5 by default
 * --seed: random seed(for better reproducting experiments): 0 by default
@@ -58,8 +58,9 @@ pip install -r requirements.txt
 * --save_model: save checkpoints of the model
 
 ### Running the code for training and evaluation
-We mainly use a .sh files to execute multiple expriements in parallel. 
-The exprimenets are saved in checkpoint with unique id. Also, when the dataset is downloaded for the first time it takes a while. 
+```
+CUDA_VISIBLE_DEVICES=0 python main.py --dataset 'SVHN' --batch_size 64  --num_epochs 50 --clip_grad 1.1 --lr 0.001 --num_clients 10 --num_classes 10 --sampling_rate 1 --local_ep 3 --beta 0.5 --seed 0 --code_len 50 --alg 'FedAvg' --part 0.1 --model 'resnet18'  --temp 0.5  
+```
 
 ### Acknowledgement
 This work is funded by Toyota Motor Corporation. We thank all staffs in AI/ML Infrastructure & Data Lab. We can not finish this work without their help.
