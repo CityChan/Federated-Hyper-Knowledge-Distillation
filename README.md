@@ -35,26 +35,26 @@ pip install -r requirements.txt
 
 ### Parameters
 * --dataset: 'CIFAR10', 'CIFAR100', ' SVHN'
-* --batch_size: 64 by defalut 
-* --num_epochs: number of global rounds, 50 by defalut
+* --batch_size: batchsize, 64 by default 
+* --num_epochs: number of global rounds, 50 by default
 * --lr: learning rate, 0.001 by defalut
-* --lr_sh_rate: period of learning rate decay, 10 by defalut
-* --dropout_rate: drop out rate for each layer, 0.2 by defalut
-* --clip_grad: maximum norm for gradient
-* --num_users: number of clients, 10 by defalut
-* --sampling_rate: proportion of clients send updates per round, 1 by defalut
-* --local_ep: local epoch, 5 by defalut
-* --beta: concentration parameter for Dirichlet distribution: 0.5 by defalut
-* --seed: random seed(for better reproducting experiments): 0 by defalut
-* --std: standard deviation by Differential Noise, 2 by defalut
-* --code_len: length of latent vector, 32 by defalut
+* --lr_sh_rate: period of learning rate decay, 10 by default
+* --dropout_rate: drop out rate for each layer, 0.2 by default
+* --clip_grad: maximum norm for gradient, 1.0 by default
+* --num_users: number of clients, 10 by default
+* --sampling_rate: proportion of clients send updates per round, 1.0 by default
+* --local_ep: number of local epochs, 5 by default
+* --beta: concentration parameter for Dirichlet distribution: 0.5 by default
+* --seed: random seed(for better reproducting experiments): 0 by default
+* --std: standard deviation by differential private noise, 2.0 by default
+* --code_len: dimention of latent vector, 32 by default
 * --alg: 'FedAvg, FedProx, Moon, FedMD, Fedproto, FedHKD'
-* --eval_only: only ouput the testing accuracy during training and the running time
+* --eval_only: only ouput the testing accuracy
 * --part: percentage of each local data
 * --temp: temperture for soft prediction
-* --lam: hyper-parameter for loss2
-* --gamma: hyper-parameter for loss3
-* --model: CNN resnet18 shufflenet
+* --lam: weights for loss2
+* --gamma: weights for loss3
+* --model: 'CNN', 'resnet18', 'shufflenet'
 * --save_model: save checkpoints of the model
 
 ### Running the code for training and evaluation
