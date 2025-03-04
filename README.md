@@ -12,7 +12,7 @@ This is an official repository for our ICLR2023 paper
 <br/>
 <br/>
 
-#### Environment 
+### Environment 
 This project is developed based on python 3.6 with [torch1.9 (rocm4.2)](https://pytorch.org/get-started/previous-versions/). We use [conda](https://www.anaconda.com/docs/main) to manage the virtual environment.
 ```
 conda create -n fedhkd --python=3.6
